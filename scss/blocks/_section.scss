@@ -1,0 +1,52 @@
+.section{
+    display: flex;
+    row-gap: 30px;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+.card{
+    background-color: $bg-color;
+    min-width: 300px;
+    max-width: 380px;
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s;
+
+    &__img{
+        width: 100%;
+        min-height: 495px;
+        max-height: 495px;
+        object-fit: cover;
+        border-radius: 9px;
+    }
+
+    &__title{
+        font-size: 38px;
+        padding-top: 15px;
+        text-align: center;
+        min-height: 107px;
+    }
+
+    &__description__id{
+        padding-top: 15px;
+        opacity: 0.6;
+    }
+
+    &__description{
+        padding-top: 20px;
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    &:hover{
+    box-shadow: 0 0 14px 1px white;
+    }
+}
+
+span{
+    color: #00B1E3;
+}
