@@ -14,11 +14,15 @@ var section = document.createElement('div')
 section.className = 'section'
 container.appendChild(section)
 
+let categories = document.createElement('div')
+categories.className = 'categories'
+h1.after(categories)
+
 // Select elementi yaratildi
 var selectGenres = document.createElement('select')
 selectGenres.setAttribute('value', 'all')
 selectGenres.className = 'select'
-section.before(selectGenres)
+categories.appendChild(selectGenres)
 
 // Selectga "All genres" optioni qoshildi va selected qilindi
 var optionAll = document.createElement('option')
@@ -32,7 +36,7 @@ selectGenres.prepend(optionAll)
 var searchInput = document.createElement('input')
 searchInput.setAttribute('type', 'search')
 searchInput.className = 'searchInput'
-section.before(searchInput)
+categories.appendChild(searchInput)
 
 
 // Xamma kinolarni render qiladigan funktsiya
