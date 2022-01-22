@@ -32,7 +32,8 @@ for( i=0; i<movies.length; i++){
 
 // Selectda tanlangan janrdgi film render qilindi
  selectGenres.addEventListener('change', function(){
-    section.innerHTML = ''
+    section.innerHTML = '' //Section bloki tozalanib tanlangan janrdagi kinolar render qilinadi
+    searchInput.value = '' //search input valuesi tozalandi
     for( i=0; i<movies.length; i++){
         if(selectGenres.value == 'all'){
             moviesEl()
