@@ -14,20 +14,6 @@ for(let i=0; i<movies.length; i++){
 
 console.log(arrGenres);
 
-// Select elementi yaratildi
-var selectGenres = document.createElement('select')
-selectGenres.setAttribute('value', 'all')
-selectGenres.className = 'select'
-section.before(selectGenres)
-
-// Selectga "All genres" optioni qoshildi va selected qilindi
-var optionAll = document.createElement('option')
-optionAll.textContent = 'All genres'
-optionAll.setAttribute('value', 'all')
-optionAll.setAttribute('selected', 'selected')
-optionAll.className = 'option'
-selectGenres.prepend(optionAll)
-
 
 // Xamma janrlarga option qoshildi
 for(let i=0; i<arrGenres.length; i++){
@@ -59,4 +45,5 @@ for( i=0; i<movies.length; i++){
            continue;
         }
     }
+    
 })

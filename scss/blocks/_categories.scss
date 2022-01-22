@@ -1,0 +1,53 @@
+.drobdown{
+    width: 300px;
+    background-color: whitesmoke;
+    &__text{
+        padding: 28px 0;
+        color: black;
+
+    }
+
+    &:hover > .categories > .categories__list{
+        height: 60px;
+        font-size: 22px;
+    }
+}
+
+.categories{
+    position: relative;
+    top: 100%;
+    left: 0;
+
+    &__list{
+    background-color: #fff;
+    color: black;
+    list-style: none;
+    width: 300px;
+    height: 0;
+    font-size: 0;
+    transition: all 0.5s;
+    position: relative;
+
+    &:hover > .categories__years > .years__list{
+        width: 300px;
+        height: 60px;
+        font-size: 22px;
+    }
+    }
+
+    &__years{
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 350px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+.years__list{
+        width: 0;
+        height: 0;
+        font-size: 0;
+        background-color: white;
+}
