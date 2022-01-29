@@ -38,6 +38,19 @@ searchInput.setAttribute('type', 'search')
 searchInput.className = 'searchInput'
 categories.appendChild(searchInput)
 
+var YearsBlock = document.createElement('div')
+categories.after(YearsBlock)
+
+var searchYears = document.createElement('select')
+searchYears.className = 'select'
+YearsBlock.appendChild(searchYears)
+
+var optionAllYears = document.createElement('option')
+optionAllYears.textContent = 'All years'
+optionAllYears.setAttribute('value', 'allYears')
+optionAllYears.setAttribute('selected', 'selected')
+optionAllYears.className = 'option'
+searchYears.prepend(optionAllYears)
 
 // Xamma kinolarni render qiladigan funktsiya
 function moviesEl(){
