@@ -52,6 +52,14 @@ optionAllYears.setAttribute('selected', 'selected')
 optionAllYears.className = 'option'
 searchYears.prepend(optionAllYears)
 
+var blockOfPagination = document.createElement('div')
+blockOfPagination.className = 'pagination__block'
+container.prepend(blockOfPagination)
+
+var listOfPagination = document.createElement('ul')
+listOfPagination.className = 'pagination__list'
+blockOfPagination.appendChild(listOfPagination)
+
 // Xamma kinolarni render qiladigan funktsiya
 function moviesEl(){
         // Card elementi

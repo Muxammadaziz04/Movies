@@ -1,8 +1,7 @@
 var years = []
 
 movies.forEach(element => {
-    let movieYear = element.year
-    if(!years.includes(movieYear)){
+    if(!years.includes(element.year)){
         years.push(element.year)
     }
 });
@@ -11,6 +10,7 @@ years.sort((a, b) =>{
     return a-b
 })
 
+console.log(years);
 
 years.forEach(element=>{
     let optionYear = document.createElement('option')
@@ -23,14 +23,14 @@ years.forEach(element=>{
 
 searchYears.addEventListener('change', ()=>{
     section.innerHTML = ''
-    movies.forEach((element, index)=>{
+    movies.forEach(item =>{
         if(searchYears.value == 'allYears'){
-            i = index
-            moviesEl()
+            element = item
+            renderMovies()
         }
-        else if(element.year == searchYears.value){
-            i = index 
-            moviesEl()
+        if(searchYears.value == item.year){
+            element = item
+            renderMovies()
         }
     })
 })

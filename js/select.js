@@ -24,27 +24,19 @@ for(let i=0; i<arrGenres.length; i++){
     selectGenres.appendChild(optionGenres)
 }
 
-// Movies html ga render qilindi
-for( i=0; i<movies.length; i++){
-    moviesEl() //moviesEl() funktsiyasi main.js da
-}
-
 
 // Selectda tanlangan janrdgi film render qilindi
  selectGenres.addEventListener('change', function(){
     section.innerHTML = '' //Section bloki tozalanib tanlangan janrdagi kinolar render qilinadi
     searchInput.value = '' //search input valuesi tozalandi
-    for( i=0; i<movies.length; i++){
+    movies.forEach(item => {
         if(selectGenres.value == 'all'){
-            moviesEl()
+            element = item
+            renderMovies()
+        } 
+        if(item.genres.includes(selectGenres.value)){
+            element = item
+            renderMovies()
         }
-        for( j=0; j<movies[i].genres.length; j++)
-        if(movies[i].genres[j] == selectGenres.value){
-           moviesEl()
-        }
-        else{
-           continue;
-        }
-    }
-    
+    })
 })
