@@ -33,6 +33,7 @@ listOfPagination.appendChild(next_page)
 var next_page_link = document.createElement('a')
 next_page_link.setAttribute('href', '#')
 next_page_link.textContent = '>>'
+next_page_link.dataset.idpage = 2
 next_page_link.className = 'pagination__link'
 next_page.appendChild(next_page_link)
 
