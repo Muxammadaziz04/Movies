@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,26 +9,45 @@
 </head>
 <body>
 
+    <div class="container">
+        <h1 class="h1">Movies</h1>
+
+        <div class="search">
+            <input type="search" value="all" class="search__Input">
+            <button class="search__Btn" type="button" data-search="search">Search</button>
+        </div>
+
+        <section class="section" id="section">
+            <div class="my-slider">
+                <div class="cssload-loader">
+                    <div class="cssload-inner cssload-one"></div>
+                    <div class="cssload-inner cssload-two"></div>
+                    <div class="cssload-inner cssload-three"></div>
+                </div>    
+            </div>
+        </section>
+
+        <div class="pagination__block">
+            <ul class="pagination__list" id="pagination__block">
+                <li class="pagination__link" data-page="prev">prev</li>
+                <li class="pagination__link" data-page="next">next</li>
+            </ul>
+        </div>
+        
+    </div>
+
    <template id="template">
         <div class="card" >
             <img id="img" alt="" class="card__img">
             <h3 id="title" class="card__title"></h3>
             <p id="id" class="card__description__id">001</p>
-            <p id="year" class="card__description"><span>Year:</span> 1988</p>
-            <p id="genres" class="card__description"><span>Genres:</span> Comedy, Fantasy</p>
-            <p id="director" class="card__description"><span>Director:</span> Tim Burton</p>
-            <p id="actors" class="card__description"><span>Actors:</span> Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page</p>
-            <p id="description" class="card__description"><span>Description:</span> A couple of recently deceased ghosts contract the services of a "bio-exorcist" in order to remove the obnoxious new owners of their house.</p>
+            <p id="year" class="card__description"><span>Year:</span>1988</p>
+            <p id="genres" class="card__description"><span>Type:</span> Movie</p>
+            <button class="card__btn" data-remove="remove">Remove</button>
         </div>
    </template>
 
 </body>
-<script src="./js/movies.js"></script>
+<!-- <script src="./js/movies.js"></script> -->
 <script src="./js/main.js"></script>
-<script src="./js/select.js"></script>
-<script src="./js/search.js"></script>
-<script src="./js/years.js"></script>
-<script src="./js/pagination.js"></script>
-
-
 </html>

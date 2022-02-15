@@ -6,10 +6,6 @@
 .pagination__list{
     display: flex;
 }
-.pagination__item{
-    display: flex;
-}
-
 .pagination__link{
     display: block;
     padding: 15px 20px;
@@ -18,6 +14,7 @@
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.363);
     text-decoration: none;
+    cursor: pointer;
     &:active{
         background-color: #49b4cf;
     }
@@ -25,12 +22,4 @@
     &:hover{
         border: 1px solid white;
     }
-}
-
-.active{
-    background: linear-gradient(180deg, #49b4cf 0%, #0095ba);
-}
-
-.disablet{
-    opacity: 0.2;
 }
