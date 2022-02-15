@@ -54,8 +54,8 @@ async function renderMovies(){
                         let movieYear = cloneTemplate.querySelector('#year')
                         movieYear.innerHTML = `<span>Year:</span> ${elem.Year}`
                         
-                        let movieType = cloneTemplate.querySelector('#genres')
-                        movieType.innerHTML = `<span>Genres:</span> ${elem.Type}`
+                        let movieType = cloneTemplate.querySelector('#type')
+                        movieType.innerHTML = `<span>Type:</span> ${elem.Type}`
                         
                         fragment.appendChild(cloneTemplate)
                 })
